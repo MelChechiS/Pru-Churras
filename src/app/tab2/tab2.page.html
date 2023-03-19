@@ -1,17 +1,54 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-title> Contador de Tento </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="back">
+  <ion-card class="ion-text-center">
+    <ion-card-title> Valendo: x </ion-card-title>
+  </ion-card>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="trucado"> <ion-button color="dark" size="large">1</ion-button> </ion-col>
+      <ion-col class="trucado"> <ion-button color="dark" size="large">3</ion-button></ion-col>
+      <ion-col class="trucado"> <ion-button color="dark" size="large">6</ion-button></ion-col>
+      <ion-col class="trucado"> <ion-button color="dark" size="large">9</ion-button></ion-col>
+      <ion-col class="trucado"> <ion-button color="dark" size="large">12</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>Time 1</ion-col>
+      <ion-col>Time 2</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button color="dark">+</ion-button></ion-col>
+      <ion-col><ion-button color="dark">+</ion-button></ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>0</ion-col>
+      <ion-col>0</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col><ion-button color="dark">-</ion-button></ion-col>
+      <ion-col><ion-button color="dark">-</ion-button></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <h1>Partidas</h1>
+    <ion-row>
+      <ion-col>Time 1: </ion-col>
+      <ion-col>x</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>Time 2: </ion-col>
+      <ion-col>x</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button color="dark" expand="block">Limpar</ion-button>
 </ion-content>
