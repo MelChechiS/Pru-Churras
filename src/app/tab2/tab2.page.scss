@@ -1,26 +1,64 @@
+.btn-valor{
+  display: flex;
+  justify-content: center;
+}
+
 .btn{
-  cursor: pointer;
+  margin: 0.8rem;
 }
 
-.principal {
+.time{
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.valendo{
+.times{
   display: flex;
-  flex-flow: column;
+  justify-content: space-around;
+
 }
 
-.time1{
-  margin-left: 10%;
+.partidas{
+  border: 2px solid rgb(95, 39, 39);
+  color: rgb(141, 46, 33);
+  padding-left: 2rem;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: rgb(255, 155, 142);
 }
 
-.footer{
-  flex-flow:row
+
+.time1, .time2{
+  display: flex;
+
 }
 
-.container-time1 {
-  flex-flow:column;
+.result1{
+margin-left: 14rem;
+}
+
+.result2{
+  margin-left: 14rem;
+  }
+
+.limpar{
+
+  display: flex;
+
+}
+
+.rodape{
+  margin: 0;
+}
+
+ion-toast.toast{
+
+    --background: #d4363e;
+    --box-shadow: 3px 3px 10px 0 rgba(32, 197, 197, 0.2);
+    --color: #fdfdff;
+
+
 
 }

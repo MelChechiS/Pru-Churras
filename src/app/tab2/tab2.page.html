@@ -1,54 +1,51 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title> Contador de Tento </ion-title>
+  <ion-toolbar color="dark">
+    <ion-title>
+      TRUCO CHURRASCO
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="back">
-  <ion-card class="ion-text-center">
-    <ion-card-title> Valendo: x </ion-card-title>
-  </ion-card>
+<ion-content [fullscreen]="true" color="dark">
+<div class="valendo">
+  <h1 class="ion-text-center">Valendo: {{valendo}}</h1>
+</div>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col class="trucado"> <ion-button color="dark" size="large">1</ion-button> </ion-col>
-      <ion-col class="trucado"> <ion-button color="dark" size="large">3</ion-button></ion-col>
-      <ion-col class="trucado"> <ion-button color="dark" size="large">6</ion-button></ion-col>
-      <ion-col class="trucado"> <ion-button color="dark" size="large">9</ion-button></ion-col>
-      <ion-col class="trucado"> <ion-button color="dark" size="large">12</ion-button></ion-col>
-    </ion-row>
-  </ion-grid>
+<div class="btn-valor">
+  <ion-button size="large" color="danger" class="btn" (click)="change_contador(1)">1</ion-button>
+  <ion-button size="large" color="danger" class="btn" (click)="change_contador(3)">3</ion-button>
+  <ion-button size="large" color="danger" class="btn" (click)="change_contador(6)">6</ion-button>
+  <ion-button size="large" color="danger" class="btn" (click)="change_contador(9)">9</ion-button>
+  <ion-button size="large" color="danger" class="btn" (click)="change_contador(12)">12</ion-button>
+</div>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col>Time 1</ion-col>
-      <ion-col>Time 2</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col><ion-button color="dark">+</ion-button></ion-col>
-      <ion-col><ion-button color="dark">+</ion-button></ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>0</ion-col>
-      <ion-col>0</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col><ion-button color="dark">-</ion-button></ion-col>
-      <ion-col><ion-button color="dark">-</ion-button></ion-col>
-    </ion-row>
-  </ion-grid>
+<div class="times">
+  <div class="time">
+    <h1>Time 1</h1>
+    <ion-button size="large" color="danger" class="btn" (click)="increase_team1_score()">+</ion-button>
+    <p>{{time1_score}}</p>
+    <ion-button size="large"color="danger"  class="btn" (click)=" decrease_team1_score()">-</ion-button>
 
-  <ion-grid>
-    <h1>Partidas</h1>
-    <ion-row>
-      <ion-col>Time 1: </ion-col>
-      <ion-col>x</ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>Time 2: </ion-col>
-      <ion-col>x</ion-col>
-    </ion-row>
-  </ion-grid>
+  </div>
+  <div class="time">
+    <h1>Time 2</h1>
+    <ion-button size="large" color="danger" class="btn" (click)=" increase_team2_score()">+</ion-button>
+    <p>{{time2_score}}</p>
+    <ion-button size="large" color="danger" class="btn" (click)=" decrease_team2_score()">-</ion-button>
+  </div>
+</div>
 
-  <ion-button color="dark" expand="block">Limpar</ion-button>
+<div class="partidas">
+  <h1>Partidas:</h1>
+  <div class="time1">
+  <h2>Time 1: </h2><h2 class="result1"> {{time1_wins}}</h2>
+  </div>
+  <div class="time2">
+    <h2>Time 2: </h2><h2 class="result2"> {{time2_wins}}</h2>
+    </div>
+</div>
+
 </ion-content>
+<ion-footer class="rodape">
+<ion-button class="limpar" size="large"   color="danger" (click)="clean()">Limpar</ion-button>
+</ion-footer>
