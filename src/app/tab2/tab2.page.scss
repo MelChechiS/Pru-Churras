@@ -1,26 +1,27 @@
-.btn-valor{
+// ESTILIZANDO TUDO!
+
+.btn-valor {
   display: flex;
   justify-content: center;
 }
 
-.btn{
-  margin: 0.8rem;
+.btn {
+  margin: 0.5rem;
 }
 
-.time{
+.time {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.times{
+.times {
   display: flex;
   justify-content: space-around;
-
 }
 
-.partidas{
+.partidas {
   border: 2px solid rgb(95, 39, 39);
   color: rgb(141, 46, 33);
   padding-left: 2rem;
@@ -29,36 +30,28 @@
   background-color: rgb(255, 155, 142);
 }
 
-
-.time1, .time2{
+.time1,
+.time2 {
   display: flex;
-
 }
 
-.result1{
-margin-left: 14rem;
-}
-
-.result2{
+.result1 {
   margin-left: 14rem;
-  }
-
-.limpar{
-
-  display: flex;
-
 }
 
-.rodape{
+.result2 {
+  margin-left: 14rem;
+}
+
+.limpar {
+  display: flex;
+}
+
+.rodape {
   margin: 0;
 }
 
-ion-toast.toast{
-
-    --background: #d4363e;
-    --box-shadow: 3px 3px 10px 0 rgba(32, 197, 197, 0.2);
-    --color: #fdfdff;
-
-
-
+ion-toast.toast {
+  --background: #d4363e;
+  --box-shadow: 3px 3px 10px 0 rgba(32, 197, 197, 0.2);
 }

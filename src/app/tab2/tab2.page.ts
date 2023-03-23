@@ -8,18 +8,22 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab2Page {
 
-  valendo = 1;
+  // VARIAVEIS CRIADAS:
+
   time1_score = 0;
   time2_score = 0;
   time1_wins = 0;
   time2_wins = 0;
+  valendo = 1;
+
+  // UTILIZANDO O TOAST:
 
   constructor(private toastController: ToastController) { }
 
   async presentToast(position: 'top' | 'middle' | 'bottom') {
     const toast = await this.toastController.create({
-      message: 'TRUCO!',
-      duration: 1500,
+      message: 'OPA, TRUCO',
+      duration: 1200,
       position: position,
       cssClass: 'toast'
     });
@@ -27,13 +31,16 @@ export class Tab2Page {
     await toast.present();
   }
 
+  // MEDIDOR DE PONTOS:
+
   change_contador(contador: number) {
     this.valendo = contador
-    if(this.valendo > 2){
+    if (this.valendo > 2) {
       this.presentToast('bottom')
     }
   }
 
+  // MEDIDOR DE PONTOS DO TIME 1:
   increase_team1_score() {
     this.time1_score += this.valendo
     this.valendo = 1
@@ -45,17 +52,18 @@ export class Tab2Page {
 
   decrease_team1_score() {
     if (this.time1_score <= 0) {
-      // do nothing
     } else {
       this.time1_score -= this.valendo
       this.valendo = 1
     }
 
-    if(this.time1_score <= 0){
+    if (this.time1_score <= 0) {
       this.time1_score = 0
 
     }
   }
+
+  // MEDIDOR DE PONTOS DO TIME 2:
 
   increase_team2_score() {
     this.time2_score += this.valendo
@@ -74,17 +82,19 @@ export class Tab2Page {
       this.valendo = 1
     }
 
-    if(this.time1_score <= 0){
+    if (this.time1_score <= 0) {
       this.time1_score = 0
     }
   }
 
+  // LIMPANDO O JOGO:
+
   clean() {
-    this.valendo = 1;
     this.time1_score = 0;
     this.time2_score = 0;
     this.time1_wins = 0;
     this.time2_wins = 0;
+    this.valendo = 1;
   }
 
 
